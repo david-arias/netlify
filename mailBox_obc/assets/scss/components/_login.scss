@@ -1,0 +1,40 @@
+
+
+.login__Wrapper {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .title3 {
+        margin: 0 0 30px 0;
+        flex-basis: 100%;
+    }
+
+    .component {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    .btn__forgot {
+        flex-basis: 100%;
+
+        margin: 20px 0 60px 0;
+        padding: 0;
+        background: transparent;
+        color: $clr_primary;
+    }
+
+    .btn__register {
+        flex-basis: 80%;
+        width: 80%;
+        margin: auto;
+    }
+
+}

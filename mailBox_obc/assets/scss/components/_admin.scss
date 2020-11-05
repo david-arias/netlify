@@ -1,0 +1,30 @@
+
+.admin__Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .title3 {
+        margin: 0 0 30px 0;
+        flex-basis: 100%;
+    }
+
+    .component {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0px 0 40px 0;
+
+        .fileName {
+            margin: 30px 0 30px;
+            font-weight: 800;
+            padding: 0 10px;
+        }
+        
+        .btn {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+}

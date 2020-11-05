@@ -1,0 +1,241 @@
+
+
+// TITTLES
+.title1 {
+    font-size: 36px;
+}
+
+.title2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.title3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+// BUTTONS
+.btn {
+    background: $clr_accent;
+    color: #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    padding: 16px 32px;
+    outline: none;
+
+    &.btn__invert {
+        border: 2px solid $clr_accent;
+        color: $clr_accent;
+        background: white;
+    }
+}
+
+// CARD
+%card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+// INPUTS
+input, textarea {
+    border: none;
+    outline: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+
+    height: 50px;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+textarea {
+    padding: 15px;
+    resize: none;
+    height: 120px;
+}
+
+.selectBox {
+    select {
+        border: none;
+        outline: none;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+    
+        height: 50px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url(./assets/img/selectArrow.png) center center no-repeat;
+        top: 10px;
+        right: 15px;
+        pointer-events: none;
+    }
+}
+
+.fileBox {
+    input[type="file"] {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;   
+    }
+
+    label {
+        border: none;
+        outline: none;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        background: white;
+        display: flex;
+        align-items: center;
+
+        height: 50px;
+        padding: 0 15px;
+        box-sizing: border-box;
+
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 34px;
+            height: 30px;
+            background: url(./assets/img/uoload.png) center center no-repeat;
+            top: 10px;
+            right: 15px;
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+// CHECK BOXES
+.checkWrap {
+    margin: 0 10px 0 0;
+    position: relative;
+
+    input[type="checkbox"] {
+        margin: 0;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        visibility: hidden;
+    }
+    label {
+        width: 25px;
+        height: 25px;
+        background: $clr_primary-light;
+        display: block;
+        border-radius: 5px;
+        border: thin solid $clr_primary;
+        position: relative;
+        box-sizing: border-box;
+
+        &:before {
+            position: absolute;
+            width: 7px;
+            height: 17px;
+            background: #0000;
+            content: "";
+            border-top: 3px solid $clr_primary;
+            border-left: 3px solid $clr_primary;
+            transform: rotate(-135deg);
+            top: -5px;
+            left: 8px;
+            visibility: hidden;
+        }
+    }
+
+    input[type="checkbox"]:checked ~ label {
+        border: 2px solid $clr_accent;
+
+        &:before {
+            visibility: visible;
+        }
+    }
+}
+
+// CHECK BOXES
+.radioWrap {
+    margin: 0 10px 0 0;
+    position: relative;
+
+    input[type="radio"] {
+        margin: 0;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        visibility: hidden;
+    }
+    label {
+        width: 25px;
+        height: 25px;
+        background: $clr_primary-light;
+        display: block;
+        border-radius: 50%;
+        border: thin solid $clr_primary;
+        position: relative;
+        box-sizing: border-box;
+
+        &:before {
+            position: absolute;
+            width: 7px;
+            height: 17px;
+            background: #0000;
+            content: "";
+            border-top: 3px solid $clr_primary;
+            border-left: 3px solid $clr_primary;
+            transform: rotate(-135deg);
+            top: -5px;
+            left: 8px;
+            visibility: hidden;
+        }
+    }
+
+    input[type="radio"]:checked ~ label {
+        border: 2px solid $clr_accent;
+
+        &:before {
+            visibility: visible;
+        }
+    }
+}

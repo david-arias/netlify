@@ -1,0 +1,84 @@
+
+.header {
+    color: $clr_secondary;
+    padding: 0 20px;
+    display: flex;
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+
+    &.init {
+        justify-content: center;
+    }
+
+    .logoWrap {
+        width: 60%;
+
+        .header__logo {
+            width: 100%;
+    
+            svg {
+                width: 100%;
+            }
+        }
+
+        .logout {
+
+            button {
+                background: none;
+                border: none;
+                color: $clr_error;
+                padding: 0;
+                font-size: 14px;
+                font-weight: 900;
+                outline: none;
+            }
+        }
+
+    }
+
+
+    .header__avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background: $clr_primary-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $clr_primary;
+    }
+
+    &.init {
+        justify-content: center;
+
+        .logoWrap {
+            width: 80%;
+
+            .header__logo {
+                width: 80%;
+            }
+        }
+    }
+}
+  
+/*
+  
+  
+  
+  .header__wellcome {
+    padding: 20px 30px;
+    color: map-get($colors, primary-light);
+  }
+  
+  
+  
+  .card {
+    background: map-get($colors, primary-light);
+    border-radius: 16px;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  
+  }
+
+  */

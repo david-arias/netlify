@@ -1,0 +1,130 @@
+
+
+.userMailbox__content {
+    .inbox__status {
+        @extend %card;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .inbox__status__number {
+            background: $clr_accent;
+            width: 100px;
+            height: 70px;
+            border-radius: 0 16px 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: -10px;
+            margin-right: -10px;
+            margin-bottom: -10px;
+
+            h1 {
+                margin: -10px 0 0 0;
+            }
+        }
+    }
+
+
+    .inbox__search {
+        @extend %card;
+        padding: 10px;
+        position: relative;
+
+        & input {
+            width: 100%;
+            padding-right: 60px;
+            margin: 0;
+        }
+    
+        & button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0, -50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: none;
+
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                path {
+                    fill: $clr_accent;
+                }
+            }
+        }
+    }
+
+    .inbox__messages {
+        @extend %card;
+        padding: 10px;
+
+        .inbox__item {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+
+            border-bottom: thin solid $clr_secondary;
+            
+            &:last-child() {
+                border-bottom: none;
+            }
+            
+            .inbox__info {
+                display: flex;
+    
+                align-items: center;
+                justify-content: space-between;
+    
+                .inbox__date {
+                    color: $clr_accent;
+                    font-weight: 900;
+                    font-size: 14px;
+                }
+                .inbox__name {
+                    font-weight: 900;
+                    font-size: 20px;
+                    margin: 5px 0;
+                }
+                .inbox__description {
+                    font-size: 14px;
+                }
+            }
+            .inbox__actions {
+                display: flex;
+                
+                .new {
+                    display: flex;
+            
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    .inbox__resend {
+                        margin: 0 15px 0 0;
+                    }
+                    .inbox__download {
+                        margin: 0 10px 0 0;
+                    }
+                }
+            }
+
+            &:not(.new) {
+                .inbox__info {
+                    opacity: 0.4;
+                }
+                .inbox__actions {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

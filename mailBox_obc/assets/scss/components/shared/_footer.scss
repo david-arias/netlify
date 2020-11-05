@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    width: 100%;
+    color: $clr_primary-light;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $clr_primary;
+    box-sizing: border-box;
+    height: 80px;
+    line-height: 0;
+
+    .footer__logo {
+        width: 50%;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .small {
+        font-size: 13px;
+    }
+}

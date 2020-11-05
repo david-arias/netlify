@@ -1,0 +1,44 @@
+
+.register__wrapper {
+
+    .title3 {
+        margin: 0 0 30px 0;
+        flex-basis: 100%;
+    }
+
+    form {
+        padding: 0 0 30px 0;
+        
+        .authotize {
+            display: flex;
+            align-items: center;
+            margin: 10px 0 30px 0;
+    
+            .small {
+                font-size: 13px;
+            }
+        }
+    
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+    
+            .small {
+                font-size: 13px;
+            }
+        }
+    
+        .btn {
+            width: 80%;
+            margin: auto;
+
+            &.btn__cancel {
+                margin: 0 auto 20px auto;
+            }
+        }
+    }
+
+
+}
