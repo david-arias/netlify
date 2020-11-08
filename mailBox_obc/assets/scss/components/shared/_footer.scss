@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     color: $clr_primary-light;
-    padding: 20px;
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -10,7 +10,7 @@
     left: 0;
     background: $clr_primary;
     box-sizing: border-box;
-    height: 80px;
+    height: 60px;
     line-height: 0;
 
     .footer__logo {
