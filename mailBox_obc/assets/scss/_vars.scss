@@ -8,3 +8,16 @@ $clr_secondary: #eaeaea;
 $clr_accent: #009CFF;
 $clr_error: #F44336;
 $clr_success: #53af53;
+
+
+
+// MIXINS
+
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out, $delay) {
+    -webkit-transition: $what $time $how $delay;
+    -moz-transition:    $what $time $how $delay;
+    -ms-transition:     $what $time $how $delay;
+    -o-transition:      $what $time $how $delay;
+    transition:         $what $time $how $delay;
+}

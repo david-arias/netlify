@@ -11,7 +11,7 @@
 
         .item {
             border-bottom: 3px solid #000;
-            padding: 10px;
+            padding: 10px 5px;
             margin: 0 15px;
             text-transform: uppercase;
             font-size: 14px;
@@ -175,6 +175,324 @@
             justify-content: center;
             border-radius: 50%;
             box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        }
+    }
+
+    .mailUserWrap {
+        width: 100%;
+
+        .title3 {
+            margin: 0 0 15px 0;
+            flex-basis: 100%;
+        }
+
+        .component {
+
+            .searchInp {
+                position: relative;
+
+                .ico {
+                    position: absolute;
+                    top: 13px;
+                    right: 10px;
+                }
+            }
+
+            .users__list {
+                @extend %card;
+                padding: 15px;
+
+                .user__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 0 15px 0;
+                    margin: 0 0 15px 0;
+                    border-bottom: thin solid #ccc;
+
+                    .userInfo {
+                        .name {
+                            font-weight: 900;
+                            font-size: 20px;
+                            margin: 5px 0;
+                            
+                            .role {
+                                font-weight: 900;
+                                font-size: 13px;
+    
+                                &.user {
+                                    color: $clr_accent;
+                                }
+                                &.admin {
+                                    color: $clr_success;
+                                }
+                            }
+                        }
+                        .mail {
+                            font-weight: 900;
+                            font-size: 14px;
+                            margin: 5px 0;
+                        }
+                        .userStatus {
+                            font-weight: 900;
+                            font-size: 18px;
+                            margin: 10px 0 0 0;
+
+                            .active {
+                                color: $clr_success;
+                            }
+                            .inactive {
+                                color: $clr_error;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .userDataWrap {
+        width: 100%;
+
+        .back {
+            color: $clr_accent;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            margin: 0  0 15px 0;
+            
+            svg {
+                margin: 0 10px 0 0;
+            }
+        }
+
+        .component {
+            .users__info {
+                @extend %card;
+                padding: 15px;
+
+                .topInfo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: thin solid #eee;
+                    padding: 0 0 15px 0;
+                    margin: 0 0 10px 0;
+
+                    .info {
+                        .name {
+                            margin: 0 0 5px 0;
+                            flex-basis: 100%;
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                        .company {
+                            color: $clr_accent;
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .btn {
+                        padding: 8px 21px;
+                        background: #eee;
+                        color: #009CFF;
+                        font-weight: 800;
+                    }
+                }
+
+                .userEditedData {
+                    margin: 25px 0;
+
+                    .item {
+                        .lbl {
+                            font-weight: 600;
+                            font-size: 14px;
+                            margin: 0 0 5px 5px;
+                        }
+                        input {
+                            border: thin solid $clr_accent;
+                            height: 34px;
+                            font-weight: 600;
+                            background: none;
+                            padding: 0 5px;
+                            
+                            &:disabled {
+                                border: none;
+                                color: $clr_accent;
+                            }
+                        }
+                    }
+                    .itemCheck {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 5px 15px 5px;
+                    
+                        .lbl {
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                        .switch {
+                            position: relative;
+                            input {
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                opacity: 0;
+                                visibility: hidden;
+                                z-index: 99999;
+                            }
+
+                            label {
+                                position: relative;
+                                display: block;
+                                border: thin solid #eee;
+                                height: 30px;
+                                width: 60px;
+                                border-radius: 40px;
+                                background: #f0f0f0;
+
+                                &:before {
+                                    content: 'NO';
+                                    position: absolute;
+                                    font-weight: 800;
+                                    color: #333;
+                                    font-size: 10px;
+                                    top: 50%;
+                                    transform: translate( 36px , -50% );
+
+                                    @include transition( all , 300ms , ease-out, 50ms );
+                                }
+
+                                &:after {
+                                    content: "";
+                                    width: 20px;
+                                    height: 20px;
+                                    background: white;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    top: 50%;
+                                    transform: translate( 5px, -50% );
+                                    border: 2px solid #ddd;
+
+                                    @include transition( all , 300ms , ease-out, 0ms );
+                                }
+                            }
+
+                            input:checked ~ label {
+                                border: thin solid $clr_accent;
+                                background: $clr_accent;
+
+                                &:after {
+                                    transform: translate( 30px, -50% );
+                                    border: 2px solid $clr_accent;
+                                    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+                                }
+
+                                &:before {
+                                    content: 'YES';
+                                    color: white;
+                                    transform: translate( 6px , -50% );
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    .btnWrap {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px 32px;
+
+                            svg {
+                                transform: scale(0.85);
+                                margin: 0 6px 0 0;
+                            }
+
+                        }
+                    }
+
+                }
+
+                .userDocsData {
+                    .inbox__item {
+                        display: flex;
+            
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 0;
+            
+                        border-bottom: thin solid $clr_secondary;
+                        
+                        &:last-child() {
+                            border-bottom: none;
+                        }
+                        
+                        .inbox__info {
+                            display: flex;
+                
+                            align-items: center;
+                            justify-content: space-between;
+                
+                            .inbox__date {
+                                color: $clr_accent;
+                                font-weight: 900;
+                                font-size: 14px;
+                            }
+                            .inbox__name {
+                                font-weight: 900;
+                                font-size: 20px;
+                                margin: 5px 0;
+                            }
+                            .inbox__user {
+                                font-weight: 900;
+                                font-size: 16px;
+                                margin: 5px 0;
+                            }
+                            .inbox__description {
+                                font-size: 14px;
+                            }
+                        }
+    
+                        .inbox__status {
+                            width: 100px;
+                            text-align: center;
+                            line-height: 1.1;
+                            font-weight: 700;
+    
+                            .new {
+                                color: $clr_success;
+                            }
+                            .leaved {
+                                color: $clr_primary;
+                            }
+                            .sended {
+                                color: $clr_accent;
+                            }
+                            .noTrackTtl {
+                                color: $clr_error;
+                            }
+    
+                            .noTrack {
+                                color: $clr_error;
+                                font-size: 12px;
+                            }
+                            .withTrack {
+                                color: $clr_primary;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
